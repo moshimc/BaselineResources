@@ -43,10 +43,12 @@ namespace BaselineResources
                         // Have we seen our target value yet?
                         if (alintSeenValue.Contains(intTargetValue) == false)
                         {
+                            // No, add it to our list of seen values
                             alintSeenValue.Add(intValue);
                         }
                         else
                         {
+                            // Yes, add our pair
                             dctPairs.Add(Math.Min(intValue, intTargetValue), Math.Max(intValue, intTargetValue));
                         }
                     }
